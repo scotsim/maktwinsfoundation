@@ -54,6 +54,8 @@ module.exports = async (req, res) => {
       
       <h3>Personal Story</h3>
       <p>${data.personalStory}</p>
+      
+      <p><em>Note: Attached files are included in this email.</em></p>
     `;
 
     // Create transporter
@@ -67,13 +69,28 @@ module.exports = async (req, res) => {
       }
     });
 
+    // Prepare attachments from base64 files
+    const attachments = [];
+    if (data.files && Array.isArray(data.files)) {
+      data.files.forEach(file => {
+        if (file.content && file.filename) {
+          attachments.push({
+            filename: file.filename,
+            content: file.content.split(',')[1], // Remove data:image/png;base64, prefix
+            encoding: 'base64'
+          });
+        }
+      });
+    }
+
     // Email options
     const mailOptions = {
       from: '"Makinde Twins Foundation" <support@swapprocessing.io>',
       to: 'shamuelmoses@gmail.com',
       subject: `New Application: ${data.fullName} - ${data.educationLevel}`,
       html: emailBody,
-      text: emailBody.replace(/<[^>]*>/g, '')
+      text: emailBody.replace(/<[^>]*>/g, ''),
+      attachments: attachments
     };
 
     // Send email
