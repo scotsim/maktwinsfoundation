@@ -4,8 +4,7 @@
   "description": "Makinde Twins Foundation Website",
   "main": "index.js",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build"
+    "dev": "vercel dev"
   },
   "dependencies": {
     "nodemailer": "^6.9.7"
@@ -14,4 +13,3 @@
     "node": "20.x"
   }
 }
- 
