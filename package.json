@@ -1,0 +1,16 @@
+{
+  "name": "mkfoundation",
+  "version": "1.0.0",
+  "description": "Makinde Twins Foundation Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educational Support Application - Makinde Twins Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-overlay {
+      background: linear-gradient(135deg, rgba(42, 26, 13, 0.95) 0%, rgba(255, 111, 60, 0.85) 100%);
+    }
+    .form-card {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.98);
+    }
+    .step-indicator {
+      transition: all 0.3s ease;
+    }
+    .step-indicator.active {
+      transform: scale(1.1);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation -->
+  <nav class="absolute top-0 left-0 right-0 z-50 px-6 py-4 md:px-20 md:py-6">
+    <div class="bg-white shadow-lg text-gray-800 px-6 py-4 rounded-3xl">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <img src="logo.png" alt="Makinde Twins Foundation Logo" class="h-12 w-auto"/>
+        </div>
+        <ul class="hidden md:flex space-x-8 text-gray-700 text-sm font-semibold">
+          <li><a class="hover:text-[#ff6f3c] transition" href="index.html">Home</a></li>
+          <li><a class="hover:text-[#ff6f3c] transition" href="index.html#about">About</a></li>
+          <li><a class="hover:text-[#ff6f3c] transition" href="index.html#programs">Programs</a></li>
+          <li><a class="hover:text-[#ff6f3c] transition" href="index.html#contact">Contact</a></li>
+        </ul>
+        <a class="hidden md:inline-block bg-[#ff6f3c] text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-[#e65a1f] hover:shadow-xl transition" href="application.html">
+          APPLY NOW
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-gray-50 to-gray-100 pt-32 pb-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <div class="mb-8">
+        <img src="logo.png" alt="Makinde Twins Foundation" class="h-24 w-auto mx-auto mb-6"/>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Educational Support Application
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Complete this application form to be considered for the Makinde Twins Foundation Educational Support Program
+      </p>
+      <div class="flex items-center justify-center gap-6 text-sm text-gray-600">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-[#ff6f3c]"></i>
+          <span>No Application Fee</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-clock text-[#ff6f3c]"></i>
+          <span>15-20 Minutes</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-shield-alt text-[#ff6f3c]"></i>
+          <span>Secure & Confidential</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form Section -->
+  <main class="relative pb-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Progress Steps -->
+      <div class="bg-white rounded-xl shadow-md p-6 mb-8 border border-gray-200">
+        <div class="flex items-center justify-between max-w-4xl mx-auto">
+          <div class="flex items-center gap-3 step-indicator active">
+            <div class="w-10 h-10 bg-[#ff6f3c] rounded-full flex items-center justify-center text-white font-semibold shadow-md">
+              1
+            </div>
+            <span class="hidden md:block font-medium text-gray-700">Personal Info</span>
+          </div>
+          <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+          <div class="flex items-center gap-3 step-indicator">
+            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-semibold">
+              2
+            </div>
+            <span class="hidden md:block font-medium text-gray-500">Parents Info</span>
+          </div>
+          <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+          <div class="flex items-center gap-3 step-indicator">
+            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-semibold">
+              3
+            </div>
+            <span class="hidden md:block font-medium text-gray-500">Academic</span>
+          </div>
+          <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+          <div class="flex items-center gap-3 step-indicator">
+            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-semibold">
+              4
+            </div>
+            <span class="hidden md:block font-medium text-gray-500">Documents</span>
+          </div>
+          <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+          <div class="flex items-center gap-3 step-indicator">
+            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-semibold">
+              5
+            </div>
+            <span class="hidden md:block font-medium text-gray-500">Your Story</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="applicationForm" class="space-y-8" enctype="multipart/form-data" novalidate>
+      <!-- Personal Information -->
+      <section class="bg-white rounded-xl shadow-md p-8 border border-gray-200">
+        <div class="mb-6 pb-4 border-b border-gray-200">
+          <h3 class="text-2xl font-bold text-gray-900">Personal Information</h3>
+          <p class="text-sm text-gray-600 mt-1">Please provide your personal details</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="fullName" class="block font-medium text-gray-700 mb-2">Full Name <span class="text-red-600">*</span></label>
+            <input type="text" id="fullName" name="fullName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="age" class="block font-semibold mb-1">Age <span class="text-red-600">*</span></label>
+            <input type="number" id="age" name="age" min="3" max="100" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div class="md:col-span-2">
+            <label for="address" class="block font-semibold mb-1">Address <span class="text-red-600">*</span></label>
+            <textarea id="address" name="address" rows="2" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200"></textarea>
+          </div>
+          <div>
+            <label for="phone" class="block font-semibold mb-1">Phone Number <span class="text-red-600">*</span></label>
+            <input type="tel" id="phone" name="phone" pattern="^\+?\d{7,15}$" placeholder="+234..." required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="passportPhoto" class="block font-semibold mb-1">Passport Photograph <span class="text-red-600">*</span></label>
+            <input type="file" id="passportPhoto" name="passportPhoto" accept="image/*" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Parents Information -->
+      <section class="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+        <div class="flex items-center gap-4 mb-8 pb-4 border-b-2 border-orange-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#ff6f3c] to-[#ff8c5a] rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+            <i class="fas fa-users"></i>
+          </div>
+          <div>
+            <h3 class="text-3xl font-extrabold text-gray-800">Parents Information</h3>
+            <p class="text-sm text-gray-500">Your family background</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="motherName" class="block font-semibold mb-1">Mother's Name <span class="text-red-600">*</span></label>
+            <input type="text" id="motherName" name="motherName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="fatherName" class="block font-semibold mb-1">Father's Name <span class="text-red-600">*</span></label>
+            <input type="text" id="fatherName" name="fatherName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div class="md:col-span-2">
+            <label for="parentsAddress" class="block font-semibold mb-1">Parents' Address <span class="text-red-600">*</span></label>
+            <textarea id="parentsAddress" name="parentsAddress" rows="2" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200"></textarea>
+          </div>
+          <div>
+            <label for="motherOccupation" class="block font-semibold mb-1">Mother's Occupation <span class="text-red-600">*</span></label>
+            <input type="text" id="motherOccupation" name="motherOccupation" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="fatherOccupation" class="block font-semibold mb-1">Father's Occupation <span class="text-red-600">*</span></label>
+            <input type="text" id="fatherOccupation" name="fatherOccupation" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="parentsPhone" class="block font-semibold mb-1">Parents' Phone Number <span class="text-red-600">*</span></label>
+            <input type="tel" id="parentsPhone" name="parentsPhone" pattern="^\+?\d{7,15}$" placeholder="+234..." required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Academic Information -->
+      <section class="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+        <div class="flex items-center gap-4 mb-8 pb-4 border-b-2 border-orange-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#ff6f3c] to-[#ff8c5a] rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+            <i class="fas fa-book"></i>
+          </div>
+          <div>
+            <h3 class="text-3xl font-extrabold text-gray-800">Academic Information</h3>
+            <p class="text-sm text-gray-500">Your educational background</p>
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="educationLevel" class="block font-semibold mb-1">Level of Education <span class="text-red-600">*</span></label>
+          <select id="educationLevel" name="educationLevel" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200">
+            <option value="" disabled selected>Select your education level</option>
+            <option value="primary">Primary</option>
+            <option value="secondary">Secondary</option>
+            <option value="tertiary">Tertiary</option>
+          </select>
+        </div>
+
+        <!-- Primary/Secondary Fields -->
+        <div id="primarySecondaryFields" class="hidden space-y-6">
+          <div>
+            <label for="schoolName" class="block font-semibold mb-1">School Name <span class="text-red-600">*</span></label>
+            <input type="text" id="schoolName" name="schoolName" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="schoolAddress" class="block font-semibold mb-1">School Address <span class="text-red-600">*</span></label>
+            <textarea id="schoolAddress" name="schoolAddress" rows="2" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200"></textarea>
+          </div>
+          <div>
+            <label for="reportCard" class="block font-semibold mb-1">Previous Session/Term Report Card <span class="text-red-600">*</span></label>
+            <input type="file" id="reportCard" name="reportCard" accept=".pdf,.jpg,.jpeg,.png" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Referees (Two contacts aware of your educational difficulty) <span class="text-red-600">*</span></label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <input type="text" name="referee1Name" placeholder="Referee 1 Name" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+              </div>
+              <div>
+                <input type="email" name="referee1Email" placeholder="Referee 1 Email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+              </div>
+              <div>
+                <input type="text" name="referee2Name" placeholder="Referee 2 Name" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+              </div>
+              <div>
+                <input type="email" name="referee2Email" placeholder="Referee 2 Email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tertiary Fields -->
+        <div id="tertiaryFields" class="hidden space-y-6">
+          <div>
+            <label for="university" class="block font-semibold mb-1">University <span class="text-red-600">*</span></label>
+            <select id="university" name="university" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200">
+              <option value="" disabled selected>Select your university</option>
+              <option value="unilag">University of Lagos</option>
+              <option value="uniben">University of Benin</option>
+              <option value="unilori">University of Ilorin</option>
+              <option value="unilorin">University of Ilorin</option>
+              <option value="unilag">University of Lagos</option>
+              <option value="abuja">University of Abuja</option>
+              <option value="unilag">Ahmadu Bello University</option>
+              <option value="unilag">Obafemi Awolowo University</option>
+              <option value="unilag">University of Nigeria, Nsukka</option>
+              <!-- Add more Nigerian universities as needed -->
+            </select>
+          </div>
+          <div>
+            <label for="matricNumber" class="block font-semibold mb-1">Matric Number <span class="text-red-600">*</span></label>
+            <input type="text" id="matricNumber" name="matricNumber" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="department" class="block font-semibold mb-1">Department <span class="text-red-600">*</span></label>
+            <input type="text" id="department" name="department" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="admissionLetter" class="block font-semibold mb-1">Admission Letter <span class="text-red-600">*</span></label>
+            <input type="file" id="admissionLetter" name="admissionLetter" accept=".pdf,.jpg,.jpeg,.png" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+          <div>
+            <label for="schoolIdCard" class="block font-semibold mb-1">School ID Card <span class="text-red-600">*</span></label>
+            <input type="file" id="schoolIdCard" name="schoolIdCard" accept=".pdf,.jpg,.jpeg,.png" class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Supporting Documents -->
+      <section class="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+        <div class="flex items-center gap-4 mb-8 pb-4 border-b-2 border-orange-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#ff6f3c] to-[#ff8c5a] rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+            <i class="fas fa-file-upload"></i>
+          </div>
+          <div>
+            <h3 class="text-3xl font-extrabold text-gray-800">Supporting Documents</h3>
+            <p class="text-sm text-gray-500">Upload required documents</p>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-orange-50 rounded-lg p-6 border border-orange-200">
+            <label for="statementOfPurpose" class="block font-semibold mb-2 text-gray-800 flex items-center gap-2">
+              <i class="fas fa-file-alt text-[#ff6f3c]"></i>
+              Statement of Purpose <span class="text-red-600">*</span>
+            </label>
+            <input type="file" id="statementOfPurpose" name="statementOfPurpose" accept=".pdf,.doc,.docx" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200 bg-white" />
+            <p class="text-sm text-gray-600 mt-2"><i class="fas fa-info-circle text-[#ff6f3c]"></i> Upload a document explaining your educational goals, aspirations, and why you're applying for this support (PDF or Word format).</p>
+          </div>
+          <div class="bg-orange-50 rounded-lg p-6 border border-orange-200">
+            <label for="recommendationLetter" class="block font-semibold mb-2 text-gray-800 flex items-center gap-2">
+              <i class="fas fa-envelope text-[#ff6f3c]"></i>
+              Letter of Recommendation <span class="text-red-600">*</span>
+            </label>
+            <input type="file" id="recommendationLetter" name="recommendationLetter" accept=".pdf,.doc,.docx" required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200 bg-white" />
+            <p class="text-sm text-gray-600 mt-2"><i class="fas fa-info-circle text-[#ff6f3c]"></i> Upload a recommendation letter from a teacher, counselor, or community leader who can attest to your character and academic potential (PDF or Word format).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Your Story -->
+      <section class="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+        <div class="flex items-center gap-4 mb-8 pb-4 border-b-2 border-orange-200">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#ff6f3c] to-[#ff8c5a] rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div>
+            <h3 class="text-3xl font-extrabold text-gray-800">Your Story</h3>
+            <p class="text-sm text-gray-500">Share your journey with us</p>
+          </div>
+        </div>
+        <div class="bg-orange-50 rounded-lg p-6 border border-orange-200">
+          <label for="personalStory" class="block font-semibold mb-2 text-gray-800 flex items-center gap-2">
+            <i class="fas fa-heart text-[#ff6f3c]"></i>
+            Tell Us Your Story <span class="text-red-600">*</span>
+          </label>
+          <textarea id="personalStory" name="personalStory" rows="6" placeholder="Share your journey with us..." required class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c] transition duration-200 bg-white"></textarea>
+          <p class="text-sm text-gray-600 mt-2"><i class="fas fa-info-circle text-[#ff6f3c]"></i> Share your educational journey, challenges you've faced, your goals, and why you need our support.</p>
+        </div>
+      </section>
+
+      <!-- Submit Section -->
+      <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 text-center border-2 border-dashed border-[#ff6f3c] shadow-lg">
+        <div class="mb-6">
+          <i class="fas fa-rocket text-5xl text-[#ff6f3c] mb-4"></i>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Ready to Submit?</h3>
+          <p class="text-gray-600">Review your information and submit your application</p>
+        </div>
+        <button type="submit" class="bg-gradient-to-r from-[#ff6f3c] to-[#ff8c5a] text-white font-bold px-16 py-5 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg uppercase tracking-wide inline-flex items-center gap-3">
+          <i class="fas fa-paper-plane"></i>
+          <span>Submit Application</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <p class="text-sm text-gray-500 mt-6">All fields marked with <span class="text-red-600 font-bold">*</span> are required</p>
+        <p class="text-xs text-gray-400 mt-2">By submitting, you agree to our terms and conditions</p>
+      </div>
+    </form>
+    </div>
+  </main>
+
+  <script>
+    const educationLevelSelect = document.getElementById('educationLevel');
+    const primarySecondaryFields = document.getElementById('primarySecondaryFields');
+    const tertiaryFields = document.getElementById('tertiaryFields');
+
+    educationLevelSelect.addEventListener('change', () => {
+      const value = educationLevelSelect.value;
+      if (value === 'primary' || value === 'secondary') {
+        primarySecondaryFields.classList.remove('hidden');
+        tertiaryFields.classList.add('hidden');
+        // Make primary/secondary fields required
+        document.getElementById('schoolName').required = true;
+        document.getElementById('schoolAddress').required = true;
+        document.getElementById('reportCard').required = true;
+        document.querySelectorAll('#primarySecondaryFields input[name^="referee"]').forEach(input => input.required = true);
+        // Remove tertiary required
+        document.getElementById('university').required = false;
+        document.getElementById('matricNumber').required = false;
+        document.getElementById('department').required = false;
+        document.getElementById('admissionLetter').required = false;
+        document.getElementById('schoolIdCard').required = false;
+      } else if (value === 'tertiary') {
+        tertiaryFields.classList.remove('hidden');
+        primarySecondaryFields.classList.add('hidden');
+        // Make tertiary fields required
+        document.getElementById('university').required = true;
+        document.getElementById('matricNumber').required = true;
+        document.getElementById('department').required = true;
+        document.getElementById('admissionLetter').required = true;
+        document.getElementById('schoolIdCard').required = true;
+        // Remove primary/secondary required
+        document.getElementById('schoolName').required = false;
+        document.getElementById('schoolAddress').required = false;
+        document.getElementById('reportCard').required = false;
+        document.querySelectorAll('#primarySecondaryFields input[name^="referee"]').forEach(input => input.required = false);
+      } else {
+        primarySecondaryFields.classList.add('hidden');
+        tertiaryFields.classList.add('hidden');
+        // Remove all required
+        document.getElementById('schoolName').required = false;
+        document.getElementById('schoolAddress').required = false;
+        document.getElementById('reportCard').required = false;
+        document.querySelectorAll('#primarySecondaryFields input[name^="referee"]').forEach(input => input.required = false);
+        document.getElementById('university').required = false;
+        document.getElementById('matricNumber').required = false;
+        document.getElementById('department').required = false;
+        document.getElementById('admissionLetter').required = false;
+        document.getElementById('schoolIdCard').required = false;
+      }
+    });
+
+    // Form submission handler
+    document.getElementById('applicationForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitButton = e.target.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
+      
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+      
+      try {
+        // Collect form data
+        const formData = new FormData(e.target);
+        const data = {};
+        
+        // Convert FormData to JSON (excluding files for now)
+        for (let [key, value] of formData.entries()) {
+          if (!(value instanceof File)) {
+            data[key] = value;
+          }
+        }
+        
+        // Send data to serverless function
+        const response = await fetch('/api/submit-application', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok && result.success) {
+          // Redirect to success page
+          window.location.href = 'success.html';
+        } else {
+          throw new Error(result.error || 'Submission failed');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error submitting your application. Please try again or contact us directly.');
+        
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }
+    });
+  </script>
+  <footer class="relative bg-[#2a1a0d] text-white px-6 py-10 md:px-16 md:py-16 overflow-hidden mt-32">
+   <img alt="Abstract flame and whole circle pattern background in dark brown with low opacity" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none select-none" height="400" src="https://storage.googleapis.com/a1aa/image/e15460d2-9396-4b87-1e75-976fcf60d121.jpg" width="600"/>
+   <div class="max-w-5xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0 relative z-10">
+    <div class="md:w-2/3 space-y-4">
+     <div class="flex items-center gap-2 text-sm">
+      <span>
+       An initiative by:
+      </span>
+      <img alt="Makinde Twins Foundation logo" class="h-6 w-auto" height="24" src="logo.png" width="80"/>
+     </div>
+     <p class="text-sm leading-relaxed">
+      Makinde Twins Foundation is a non-profit organization dedicated to ensuring every child has the right to remain in school, regardless of financial constraints.
+     </p>
+     <p class="text-sm leading-relaxed">
+      We provide educational funding, resources, and support to empower students at all levels and build a brighter future for our communities.
+     </p>
+     <p class="text-sm font-semibold text-[#ff6f3c]">
+      Focus Areas:
+     </p>
+     <p class="text-sm leading-relaxed">
+      Educational Access
+      <span class="mx-2">
+       ·
+      </span>
+      Academic Support
+      <span class="mx-2">
+       ·
+      </span>
+      Student Success
+      <span class="mx-2">
+       ·
+      </span>
+      Community Education
+      <span class="mx-2">
+       ·
+      </span>
+      Learning Resources
+     </p>
+
+    </div>
+    <div class="md:w-1/3 flex flex-col justify-between">
+     <div>
+      <p class="text-sm mb-2">
+       Contact Us
+      </p>
+      <p class="text-xs text-[#ff6f3c] font-semibold mb-1">
+       Phone Numbers:
+      </p>
+      <p class="text-xs leading-tight mb-1">
+       +2348037272478
+      </p>
+      <p class="text-xs leading-tight mb-3">
+       +2348136721498
+      </p>
+      <p class="text-xs text-[#ff6f3c] font-semibold mb-1">
+       Email Addresses:
+      </p>
+      <p class="text-xs leading-tight mb-1">
+       contact@makindetwinsfoundation@gmail.org
+      </p>
+      <p class="text-xs leading-tight">
+       support@makindetwinsfoundation.org
+      </p>
+     </div>
+     <div class="flex flex-col items-center md:items-end mt-10 md:mt-0 space-y-6">
+      <img alt="Makinde Twins Foundation logo" class="w-40 h-auto" height="60" src="logo.png" width="160"/>
+      <div class="flex space-x-3">
+       <button aria-label="Facebook" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-facebook-f">
+        </i>
+       </button>
+       <button aria-label="Twitter" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-twitter">
+        </i>
+       </button>
+       <button aria-label="LinkedIn" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-linkedin-in">
+        </i>
+       </button>
+       <button aria-label="Instagram" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-instagram">
+        </i>
+       </button>
+      </div>
+      <button class="bg-[#ff6f3c] text-white rounded-full px-8 py-3 font-semibold uppercase tracking-wide hover:bg-[#e65a1f] transition w-full max-w-xs">
+       Register Now
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-1">
+    <div class="text-[#ff6f3c] text-xs font-mono tracking-widest rotate-90 origin-center select-none">
+     scroll
+    </div>
+    <div class="w-px h-16 bg-[#ff6f3c] relative">
+     <span class="block w-2 h-2 bg-[#ff6f3c] rounded-full absolute -left-1 top-1/2 -translate-y-1/2">
+     </span>
+    </div>
+   </div>
+  </footer>
+</body>
+</html>

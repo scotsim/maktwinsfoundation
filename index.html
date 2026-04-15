@@ -1,0 +1,792 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Makinde Twins Foundation: Ensuring Every Child's Right to Education
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Keep scrolling functionality */
+  font-family: "Inter", sans-serif;
+}
+
+/* Hide scrollbar (visually only) */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Header Slideshow Styles */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.slideshow-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slideshow-slide.active {
+  opacity: 1;
+}
+
+.slideshow-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.slideshow-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slideshow-dot.active {
+  background-color: #ff6f3c;
+}
+
+</style>
+
+ </head>
+ <body class="bg-white">
+  <div class="relative min-h-screen">
+   <div class="slideshow-container">
+    <div class="slideshow-slide active">
+     <img alt="African children in classroom learning with teacher" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&h=800&fit=crop" width="1920" height="800"/>
+    </div>
+    <div class="slideshow-slide">
+     <img alt="African students studying together, collaborative learning" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&h=800&fit=crop" width="1920" height="800"/>
+    </div>
+    <div class="slideshow-slide">
+     <img alt="African girl reading book in school, literacy and education" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&h=800&fit=crop" width="1920" height="800"/>
+    </div>
+    <div class="slideshow-slide">
+     <img alt="African children in classroom, inclusive education" src="https://images.unsplash.com/photo-1564429238817-393bd4286b2d?w=1920&h=800&fit=crop" width="1920" height="800"/>
+    </div>
+    <div class="slideshow-slide">
+     <img alt="African teacher helping students, education in Africa" src="https://images.unsplash.com/photo-1497375638960-ca368c7231e4?w=1920&h=800&fit=crop" width="1920" height="800"/>
+    </div>
+    <div class="slideshow-dots">
+     <div class="slideshow-dot active" data-slide="0"></div>
+     <div class="slideshow-dot" data-slide="1"></div>
+     <div class="slideshow-dot" data-slide="2"></div>
+     <div class="slideshow-dot" data-slide="3"></div>
+     <div class="slideshow-dot" data-slide="4"></div>
+    </div>
+   </div>
+   <nav class="absolute inset-x-6 top-6 flex items-center justify-between rounded-3xl shadow-lg px-6 py-4 md:inset-x-20" style="background-color: #FFFFFF;">
+    <div class="flex items-center space-x-4">
+     <img src="logo.png" alt="Makinde Twins Foundation Logo" class="h-16 w-auto rounded-lg"/>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-gray-800 text-sm font-semibold">
+     <li>
+      <a class="hover:underline" href="#">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#programs">
+       Programs
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#programs">
+       Scholarships
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#partners">
+       Partners
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <a class="hidden md:inline-block bg-[#ff6f3c] text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-[#e65a1f] transition" href="application.html">
+     REGISTER NOW
+    </a>
+    <button id="mobile-menu-btn" class="md:hidden text-gray-800 text-2xl">
+     <i class="fas fa-bars"></i>
+    </button>
+   </nav>
+   <div id="mobile-menu" class="hidden absolute top-24 left-6 right-6 bg-black bg-opacity-90 rounded-3xl px-6 py-6 z-50">
+    <ul class="flex flex-col space-y-4 text-white text-sm font-semibold">
+     <li>
+      <a class="hover:underline block" href="#">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline block" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline block" href="#programs">
+       Programs
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline block" href="#programs">
+       Scholarships
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline block" href="#partners">
+       Partners
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline block" href="#contact">
+       Contact
+      </a>
+     </li>
+     <li>
+      <a class="bg-[#ff6f3c] text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-[#e65a1f] transition inline-block text-center" href="application.html">
+       REGISTER NOW
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="absolute top-40 left-4 right-4 md:left-20 md:right-auto max-w-4xl text-white px-4 md:px-0">
+     <h1 class="font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight max-w-3xl">
+     Makinde Twins Foundation:
+     <span class="text-[#ff6f3c]">
+      Empowering Education for Every Child
+     </span>
+    </h1>
+
+
+     <p class="mt-8 max-w-4xl text-sm md:text-base text-white/90" style="font-size:16px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+     Makinde Twins Foundation is a non-profit organization dedicated to ensuring every child has the right to remain in school, regardless of financial constraints. We provide educational funding, resources, and support to empower students at all levels.
+    </p>
+     <p class="mt-4 md:mt-6 max-w-2xl text-sm md:text-base text-[#ff6f3c]/90 font-semibold " style="font-size:16px;" >
+     Scholarships and educational resources available
+    </p>
+
+    <div class="mt-6 md:mt-55 flex flex-wrap gap-2">
+      <a class="bg-[#ff6f3c] text-white text-xs font-semibold rounded-full px-8 md:px-12 py-3 inline-block whitespace-nowrap hover:bg-[#e65a1f] transition" href="application.html">
+      APPLY FOR SUPPORT
+     </a>
+
+    </div>
+   </div>
+   <div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-2 cursor-default">
+    <div class="text-[#ff6f3c] text-[10px] font-semibold tracking-widest rotate-90 origin-center select-none">
+     scroll
+    </div>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+    <svg class="w-1 h-1 stroke-[#ff6f3c]" fill="none" viewbox="0 0 2 2" xmlns="http://www.w3.org/2000/svg">
+     <circle cx="1" cy="1" r="1" stroke-width="0.5">
+     </circle>
+    </svg>
+   </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5">
+   <section class="mb-16">
+    <h2 class="text-center text-3xl font-extrabold text-black mb-4">
+     Message from Our Founders
+    </h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+     Hear directly from Dr. Kenny and Dr. Taiwo Makinde about their vision for empowering education and transforming lives.
+    </p>
+    <div class="max-w-4xl mx-auto">
+     <div class="relative rounded-2xl overflow-hidden shadow-2xl" style="padding-bottom: 56.25%; height: 0;">
+      <iframe 
+       class="absolute top-0 left-0 w-full h-full"
+       src="https://www.youtube.com/embed/G8UHU5K6vHU" 
+       title="Message from Makinde Twins Foundation Founders" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+       allowfullscreen>
+      </iframe>
+     </div>
+    </div>
+   </section>
+   <h1 id="programs" class="text-center font-semibold text-2xl md:text-3xl mb-10">
+    Our Foundation Programs
+   </h1>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="space-y-10">
+     <div class="flex items-start space-x-4">
+      <div class="text-[#ff6f3c] mt-1">
+       <i class="fas fa-graduation-cap fa-lg">
+       </i>
+      </div>
+      <div>
+       <h3 class="text-[#ff6f3c] font-semibold text-sm md:text-base uppercase">
+        SCHOLARSHIP PROGRAMS
+       </h3>
+       <p class="text-gray-600 text-sm md:text-base max-w-xs">
+        Providing financial support and scholarships to ensure children can continue their education without interruption.
+       </p>
+      </div>
+     </div>
+     <div class="flex items-start space-x-4">
+      <div class="text-[#ff6f3c] mt-1">
+       <i class="fas fa-book fa-lg">
+       </i>
+      </div>
+      <div>
+       <h3 class="text-[#ff6f3c] font-semibold text-sm md:text-base uppercase">
+        EDUCATIONAL RESOURCES
+       </h3>
+       <p class="text-gray-600 text-sm md:text-base max-w-xs">
+        Distributing textbooks, school supplies, and learning materials to students in need across communities.
+       </p>
+      </div>
+     </div>
+     <div class="flex items-start space-x-4">
+      <div class="text-[#ff6f3c] mt-1">
+       <i class="fas fa-chalkboard-teacher fa-lg">
+       </i>
+      </div>
+      <div>
+       <h3 class="text-[#ff6f3c] font-semibold text-sm md:text-base uppercase">
+        TUTORING &amp; MENTORSHIP
+       </h3>
+       <p class="text-gray-600 text-sm md:text-base max-w-xs">
+        Connecting students with qualified tutors and mentors to improve academic performance and build confidence.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="relative flex justify-center items-center">
+     <img alt="African students in a classroom workshop" class="rounded-lg w-80 h-56 object-cover" height="220" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=640&h=440&fit=crop" width="320"/>
+     <div class="absolute rounded-full border-2 border-white overflow-hidden w-56 h-56 -bottom-28 left-1/2 -translate-x-1/2 bg-gray-800 bg-opacity-40 flex items-center justify-center" style="backdrop-filter: blur(4px);">
+      <img alt="African youth collaborating and smiling" class="w-full h-full object-cover" height="224" src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=400&h=400&fit=crop" width="224"/>
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+       <h2 class="text-gray-300 font-semibold text-xl md:text-2xl text-center px-4">
+        Workshops &amp; Breakout Sessions
+       </h2>
+      </div>
+     </div>
+    </div>
+    <div class="space-y-10 mt-24 md:mt-0">
+     <div class="flex items-start space-x-4">
+      <div class="text-[#ff6f3c] mt-1">
+       <i class="fas fa-globe fa-lg">
+       </i>
+      </div>
+      <div>
+       <h3 class="text-[#ff6f3c] font-semibold text-sm md:text-base uppercase">
+        GLOBAL PERSPECTIVES
+       </h3>
+       <p class="text-gray-600 text-sm md:text-base max-w-xs">
+        Exposure to global trends and ideas to help youth navigate and thrive in a changing world.
+       </p>
+      </div>
+     </div>
+     <div class="flex items-start space-x-4 relative">
+      <div class="text-[#ff6f3c] mt-1">
+       <i class="fas fa-heart fa-lg">
+       </i>
+      </div>
+      <div>
+       <h3 class="text-[#ff6f3c] font-semibold text-sm md:text-base uppercase leading-snug">
+        PERSONAL DEVELOPMENT
+       </h3>
+       <p class="text-gray-600 text-sm md:text-base max-w-xs">
+        Sessions focused on mental health, self-awareness, and building resilience for a fulfilling life.
+       </p>
+      </div>
+      <div class="absolute right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-1">
+       <div class="text-[#ff6f3c] font-semibold text-xs rotate-90 origin-center select-none">
+        scroll
+       </div>
+       <div class="w-px h-16 bg-[#ff6f3c] relative">
+        <div class="w-2 h-2 bg-[#ff6f3c] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <section id="partners" class="max-w-7xl mx-auto px-6 py-16 mt-10 md:mt-32">
+   <h2 class="text-center text-2xl font-extrabold text-black mb-12">
+    Partner With Us
+   </h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-10 max-w-6xl mx-auto">
+    <div class="flex space-x-4 md:space-x-6">
+     <div class="text-[#ff6f3c] text-2xl flex items-start pt-1">
+      <i class="fas fa-handshake">
+      </i>
+     </div>
+     <div>
+      <h3 class="text-[#ff6f3c] font-semibold text-sm uppercase leading-tight">
+       Sponsorship
+      </h3>
+      <p class="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs">
+       Partner with us to empower youth and teenagers by supporting impactful programs and initiatives.
+      </p>
+     </div>
+    </div>
+    <div class="flex space-x-4 md:space-x-6">
+     <div class="text-[#ff6f3c] text-2xl flex items-start pt-1">
+      <i class="fas fa-bullhorn">
+      </i>
+     </div>
+     <div>
+      <h3 class="text-[#ff6f3c] font-semibold text-sm uppercase leading-tight">
+       Brand Awareness
+      </h3>
+      <p class="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs">
+       Increase your brand visibility among young adults and position your organization as a leader in youth development.
+      </p>
+     </div>
+    </div>
+    <div class="flex space-x-4 md:space-x-6">
+     <div class="text-[#ff6f3c] text-2xl flex items-start pt-1">
+      <i class="fas fa-bullseye">
+      </i>
+     </div>
+     <div>
+      <h3 class="text-[#ff6f3c] font-semibold text-sm uppercase leading-tight">
+       Lead Generation
+      </h3>
+      <p class="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs">
+       Connect with motivated young adults and stakeholders to generate meaningful leads and partnerships.
+      </p>
+     </div>
+    </div>
+    <div class="flex space-x-4 md:space-x-6">
+     <div class="text-[#ff6f3c] text-2xl flex items-start pt-1">
+      <i class="fas fa-chalkboard-teacher">
+      </i>
+     </div>
+     <div>
+      <h3 class="text-[#ff6f3c] font-semibold text-sm uppercase leading-tight">
+       Thought Leadership
+      </h3>
+      <p class="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs">
+       Showcase your expertise by participating in panels, workshops, and keynote sessions.
+      </p>
+     </div>
+    </div>
+    <div class="flex space-x-4 md:space-x-6">
+     <div class="text-[#ff6f3c] text-2xl flex items-start pt-1">
+      <i class="fas fa-globe">
+      </i>
+     </div>
+     <div>
+      <h3 class="text-[#ff6f3c] font-semibold text-sm uppercase leading-tight">
+       Community Impact
+      </h3>
+      <p class="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs">
+       Join us in making a positive impact on the youth community and shaping the future.
+      </p>
+     </div>
+    </div>
+    <div class="flex space-x-4 md:space-x-6">
+     <div class="text-[#ff6f3c] text-2xl flex items-start pt-1">
+      <i class="fas fa-hands-helping">
+      </i>
+     </div>
+     <div>
+      <h3 class="text-[#ff6f3c] font-semibold text-sm uppercase leading-tight">
+       Volunteer Opportunities
+      </h3>
+      <p class="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs">
+       Engage directly with youth by volunteering at the summit and related events.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col items-center text-[#ff6f3c] text-xs font-semibold tracking-wide cursor-default select-none">
+    <div class="w-px h-16 bg-[#ff6f3c] relative">
+     <div class="w-2.5 h-2.5 bg-[#ff6f3c] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- Support & Partnership Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 mt-32">
+   <div class="bg-gradient-to-br from-[#2a1a0d] to-[#3d2817] rounded-3xl overflow-hidden shadow-2xl">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+     <!-- Left Side - Content -->
+     <div class="p-8 md:p-12 text-white">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+       Join Us in Transforming Lives
+      </h2>
+      <p class="text-lg text-gray-300 mb-8">
+       Your support can change a child's future. Partner with us, donate, or volunteer to make education accessible for all.
+      </p>
+      
+      <div class="space-y-6 mb-8">
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-[#ff6f3c] rounded-lg flex items-center justify-center flex-shrink-0">
+         <i class="fas fa-handshake text-white text-xl"></i>
+        </div>
+        <div>
+         <h3 class="font-bold text-lg mb-1">Become a Partner</h3>
+         <p class="text-gray-300 text-sm">Collaborate with us to create lasting impact in education</p>
+        </div>
+       </div>
+       
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-[#ff6f3c] rounded-lg flex items-center justify-center flex-shrink-0">
+         <i class="fas fa-heart text-white text-xl"></i>
+        </div>
+        <div>
+         <h3 class="font-bold text-lg mb-1">Make a Donation</h3>
+         <p class="text-gray-300 text-sm">Every contribution helps a child stay in school</p>
+        </div>
+       </div>
+       
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-[#ff6f3c] rounded-lg flex items-center justify-center flex-shrink-0">
+         <i class="fas fa-hands-helping text-white text-xl"></i>
+        </div>
+        <div>
+         <h3 class="font-bold text-lg mb-1">Volunteer With Us</h3>
+         <p class="text-gray-300 text-sm">Share your time and expertise to empower students</p>
+        </div>
+       </div>
+       
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-[#ff6f3c] rounded-lg flex items-center justify-center flex-shrink-0">
+         <i class="fas fa-bullhorn text-white text-xl"></i>
+        </div>
+        <div>
+         <h3 class="font-bold text-lg mb-1">Sponsor a Program</h3>
+         <p class="text-gray-300 text-sm">Fund specific initiatives and see direct impact</p>
+        </div>
+       </div>
+      </div>
+     </div>
+     
+     <!-- Right Side - Contact Form -->
+     <div class="bg-white p-8 md:p-12">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+      <form id="supportForm" class="space-y-4">
+       <div>
+        <label for="support-name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+        <input type="text" id="support-name" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c]" />
+       </div>
+       
+       <div>
+        <label for="support-email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+        <input type="email" id="support-email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c]" />
+       </div>
+       
+       <div>
+        <label for="support-phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+        <input type="tel" id="support-phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c]" />
+       </div>
+       
+       <div>
+        <label for="support-interest" class="block text-sm font-medium text-gray-700 mb-2">I'm Interested In *</label>
+        <select id="support-interest" name="interest" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c]">
+         <option value="">Select an option</option>
+         <option value="partnership">Partnership Opportunities</option>
+         <option value="donation">Making a Donation</option>
+         <option value="volunteer">Volunteering</option>
+         <option value="sponsorship">Program Sponsorship</option>
+         <option value="other">Other</option>
+        </select>
+       </div>
+       
+       <div>
+        <label for="support-message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+        <textarea id="support-message" name="message" rows="4" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#ff6f3c] focus:border-[#ff6f3c]"></textarea>
+       </div>
+       
+       <button type="submit" class="w-full bg-[#ff6f3c] text-white font-semibold py-3 rounded-lg hover:bg-[#e65a1f] transition">
+        Send Message
+       </button>
+      </form>
+      
+      <div class="mt-8 pt-8 border-t border-gray-200">
+       <p class="text-sm font-semibold text-gray-700 mb-3">Or reach us directly:</p>
+       <div class="space-y-2 text-sm text-gray-600">
+        <div class="flex items-center gap-2">
+         <i class="fas fa-phone text-[#ff6f3c]"></i>
+         <span>+2348037272478 | +2348136721498</span>
+        </div>
+        <div class="flex items-center gap-2">
+         <i class="fas fa-envelope text-[#ff6f3c]"></i>
+         <span>contact@makindetwinsfoundation.org</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section id="about" class="max-w-7xl mx-auto px-6 py-16 mt-32">
+   <h2 class="text-center text-3xl font-extrabold text-black mb-12">
+    Founders
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
+    <div class="flex flex-col items-center text-center">
+     <img alt="Portrait of Dr Kenny Makinde" class="w-40 h-40 rounded-full object-cover mb-4 shadow-lg" height="160" src="kenny.jpg" width="160"/>
+     <h3 class="text-lg font-semibold text-gray-900">
+      Dr Kenny Makinde
+     </h3>
+     <p class="text-sm text-gray-600">
+      Co-Founder, Makinde Twins Foundation
+     </p>
+    </div>
+    <div class="flex flex-col items-center text-center">
+     <img alt="Portrait of Dr Taiwo Makinde" class="w-40 h-40 rounded-full object-cover mb-4 shadow-lg" height="160" src="taiwo.jpg" width="160"/>
+     <h3 class="text-lg font-semibold text-gray-900">
+      Dr Taiwo Makinde
+     </h3>
+     <p class="text-sm text-gray-600">
+      Co-Founder, Makinde Twins Foundation
+     </p>
+    </div>
+   </div>
+  </section>
+  <footer id="contact" class="relative bg-[#2a1a0d] text-white px-6 py-10 md:px-16 md:py-16 overflow-hidden mt-32">
+   <img alt="Abstract flame and whole circle pattern background in dark brown with low opacity" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none select-none" height="400" src="https://storage.googleapis.com/a1aa/image/e15460d2-9396-4b87-1e75-976fcf60d121.jpg" width="600"/>
+   <div class="max-w-5xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0 relative z-10">
+    <div class="md:w-2/3 space-y-4">
+     <div class="flex items-center gap-2 text-sm">
+      <span>
+       An initiative by:
+      </span>
+      <img src="logo.png" alt="Makinde Twins Foundation Logo" class="h-8 w-auto rounded-lg"/>
+     </div>
+     <p class="text-sm leading-relaxed">
+      Makinde Twins Foundation is a non-profit organization dedicated to ensuring every child has the right to remain in school, regardless of financial constraints.
+     </p>
+     <p class="text-sm leading-relaxed">
+      We provide educational funding, resources, and support to empower students at all levels and build a brighter future for our communities.
+     </p>
+     <p class="text-sm font-semibold text-[#ff6f3c]">
+      Focus Areas:
+     </p>
+     <p class="text-sm leading-relaxed">
+      Educational Access
+      <span class="mx-2">
+       ·
+      </span>
+      Academic Support
+      <span class="mx-2">
+       ·
+      </span>
+      Student Success
+      <span class="mx-2">
+       ·
+      </span>
+      Community Education
+      <span class="mx-2">
+       ·
+      </span>
+      Learning Resources
+     </p>
+
+    </div>
+    <div class="md:w-1/3 flex flex-col justify-between">
+     <div>
+      <p class="text-sm mb-2">
+       Contact Us
+      </p>
+      <p class="text-xs text-[#ff6f3c] font-semibold mb-1">
+       Phone Numbers:
+      </p>
+      <p class="text-xs leading-tight mb-1">
+       +2348037272478
+      </p>
+      <p class="text-xs leading-tight mb-3">
+       +2348136721498
+      </p>
+      <p class="text-xs text-[#ff6f3c] font-semibold mb-1">
+       Email Addresses:
+      </p>
+      <p class="text-xs leading-tight mb-1">
+       contact@makindetwinsfoundation.org
+      </p>
+      <p class="text-xs leading-tight">
+       support@makindetwinsfoundation.org
+      </p>
+     </div>
+     <div class="flex flex-col items-center md:items-end mt-10 md:mt-0 space-y-6">
+      <img src="logo.jpeg" alt="Makinde Twins Foundation Logo" class="h-16 w-auto rounded-lg"/>
+      <div class="flex space-x-3">
+       <button aria-label="Facebook" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-facebook-f">
+        </i>
+       </button>
+       <button aria-label="Twitter" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-twitter">
+        </i>
+       </button>
+       <button aria-label="LinkedIn" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-linkedin-in">
+        </i>
+       </button>
+       <button aria-label="Instagram" class="bg-[#6b7280]/40 hover:bg-[#6b7280]/60 rounded-full w-10 h-10 flex items-center justify-center text-white text-lg">
+        <i class="fab fa-instagram">
+        </i>
+       </button>
+      </div>
+      <a href="application.html" class="bg-[#ff6f3c] text-white rounded-full px-8 py-3 font-semibold uppercase tracking-wide hover:bg-[#e65a1f] transition w-full max-w-xs inline-block text-center">
+       Apply Now
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-1">
+    <div class="text-[#ff6f3c] text-xs font-mono tracking-widest rotate-90 origin-center select-none">
+     scroll
+    </div>
+    <div class="w-px h-16 bg-[#ff6f3c] relative">
+     <span class="block w-2 h-2 bg-[#ff6f3c] rounded-full absolute -left-1 top-1/2 -translate-y-1/2">
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script>
+    // Slideshow functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slideshow-slide');
+    const dots = document.querySelectorAll('.slideshow-dot');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 5000);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Support form submission
+    const supportForm = document.getElementById('supportForm');
+    if (supportForm) {
+      supportForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        
+        try {
+          const formData = new FormData(e.target);
+          const data = Object.fromEntries(formData.entries());
+          
+          const response = await fetch('/api/submit-support', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          
+          const result = await response.json();
+          
+          if (response.ok && result.success) {
+            alert('Thank you! Your message has been sent successfully. We will contact you soon.');
+            e.target.reset();
+          } else {
+            throw new Error(result.error || 'Submission failed');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('There was an error sending your message. Please try again or contact us directly.');
+        } finally {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+      });
+    }
+  </script>
+ </body>
+</html>
