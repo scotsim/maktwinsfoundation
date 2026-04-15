@@ -410,6 +410,16 @@
       }
     });
 
+    // Helper function to convert file to base64
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+    }
+
     // Form submission handler
     document.getElementById('applicationForm').addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -425,13 +435,22 @@
         // Collect form data
         const formData = new FormData(e.target);
         const data = {};
+        const files = [];
         
-        // Convert FormData to JSON (excluding files for now)
+        // Convert FormData to JSON and handle files
         for (let [key, value] of formData.entries()) {
-          if (!(value instanceof File)) {
+          if (value instanceof File && value.size > 0) {
+            const base64 = await fileToBase64(value);
+            files.push({
+              filename: value.name,
+              content: base64
+            });
+          } else if (!(value instanceof File)) {
             data[key] = value;
           }
         }
+        
+        data.files = files;
         
         // Send data to serverless function
         const response = await fetch('/api/submit-application', {
