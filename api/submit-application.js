@@ -60,12 +60,12 @@ module.exports = async (req, res) => {
 
     // Create transporter
     const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
+      host: 'smtppro.zoho.com',
       port: 465,
       secure: true,
       auth: {
-        user: 'support@swapprocessing.io',
-        pass: 'pan03>c9N'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       }
     });
 
@@ -85,7 +85,7 @@ module.exports = async (req, res) => {
 
     // Email options
     const mailOptions = {
-      from: '"Makinde Twins Foundation" <support@swapprocessing.io>',
+      from: `"Makinde Twins Foundation" <${process.env.EMAIL_USER}>`,
       to: 'kennymak@makindetwinsfoundation.org',
       subject: `New Application: ${data.fullName} - ${data.educationLevel}`,
       html: emailBody,
