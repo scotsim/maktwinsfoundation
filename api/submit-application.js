@@ -86,7 +86,7 @@ module.exports = async (req, res) => {
     // Email options
     const mailOptions = {
       from: `"Makinde Twins Foundation" <${process.env.EMAIL_USER}>`,
-      to: 'kennymak@makindetwinsfoundation.org',
+      to: 'shamuelmoses@gmail.com',
       subject: `New Application: ${data.fullName} - ${data.educationLevel}`,
       html: emailBody,
       text: emailBody.replace(/<[^>]*>/g, ''),
